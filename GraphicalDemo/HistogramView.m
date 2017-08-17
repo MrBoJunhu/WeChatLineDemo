@@ -17,9 +17,13 @@ static CGFloat detailFontSize = 8;
 @interface HistogramView()
 
 @property (nonatomic, copy) NSString *title;
+
 @property (nonatomic, strong) NSMutableArray<NSNumber *> *yLeftData;
+
 @property (nonatomic, strong) NSMutableArray<NSNumber *> *yRightData;
+
 @property (nonatomic, strong) NSMutableArray<NSNumber *> *yData;
+
 @property (nonatomic, strong) NSMutableArray<NSNumber *> *xData;
 
 @end
