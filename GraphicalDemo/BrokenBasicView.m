@@ -51,11 +51,16 @@
     //增加渐变色
     CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
     
+    //startPoint  endPoint 渐变的方向(从左上角到右下角)
+    gradientLayer.startPoint = CGPointMake(0, 0);
+    
+    gradientLayer.endPoint = CGPointMake(1, 1);
+    
     gradientLayer.frame = self.bounds;
     
     gradientLayer.colors = [NSArray arrayWithObjects:(id)[UIColor yellowColor].CGColor, (id)[UIColor cyanColor].CGColor, (id)[UIColor redColor].CGColor,nil];
     
-    gradientLayer.locations = @[@0.0,@0.3,@0.8,@1];
+    gradientLayer.locations = @[@0.0,@0.5,@0.8,@1];
     
     [self.layer addSublayer:gradientLayer];
     

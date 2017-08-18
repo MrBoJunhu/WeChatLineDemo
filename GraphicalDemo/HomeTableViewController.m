@@ -24,10 +24,11 @@
 - (void)viewDidLoad {
    
     [super viewDidLoad];
+  
     self.title = @"图形绘制";
-    self.typesArray = @[@"柱状图", @"折线图"];
-
     
+    self.typesArray = @[@"柱状图", @"折线图",@"bezierPathWithRoundedRect"];
+
 }
 
 

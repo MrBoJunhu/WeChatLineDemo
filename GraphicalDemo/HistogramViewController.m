@@ -98,7 +98,7 @@
     
     NSArray *X_StringArray = @[@"1月",@"2月",@"3月",@"4月",@"5月",@"6月",@"7月"];
     
-    NSArray *Y_Array = @[@100.5,@300,@2500,@603,@745,@500,@900];
+    NSArray *Y_Array = @[@500.5,@300,@2500,@603,@745,@500,@900];
 
     self.brokenLineV = [[BrokenBasicView alloc] initWithFrame:self.view.bounds title:@"测试数据" XArray:[X_StringArray mutableCopy] YArray:[Y_Array mutableCopy]];
     

@@ -52,8 +52,6 @@ static CGFloat wordTopSpace = 2;
  */
 @property (nonatomic, strong)  UIBezierPath *bezierPath;
 
-
-
 /**
  点击曲线图部分触发事件
  */
@@ -65,6 +63,11 @@ static CGFloat wordTopSpace = 2;
  */
 @property (nonatomic, strong) UILabel * showClickLB;
 
+
+/**
+ 当前点击的index
+ */
+@property (nonatomic, assign) NSUInteger currentSelectedIndex;
 
 @end
 
@@ -80,6 +83,8 @@ static CGFloat wordTopSpace = 2;
         self.XArray = [NSMutableArray arrayWithArray:xArray];
         
         self.title = title;
+        
+        self.currentSelectedIndex = -1;
         
         self.backgroundColor = [UIColor clearColor];
         
@@ -388,8 +393,6 @@ static CGFloat wordTopSpace = 2;
             
         }
         
-        NSLog(@"离第%ld个点比较近, 是 %@", index,self.YArray[index]);
-        
         NSValue *pointValue = self.allPoints[index];
         
         CGPoint showPoint = pointValue.CGPointValue;
@@ -412,6 +415,16 @@ static CGFloat wordTopSpace = 2;
             
         }
        
+        if (index == self.currentSelectedIndex) {
+            
+            return;
+       
+        }else{
+        
+            self.currentSelectedIndex = index;
+        
+        }
+        
         self.showClickLB.alpha = 0;
         
         self.showClickLB.text = numString;
