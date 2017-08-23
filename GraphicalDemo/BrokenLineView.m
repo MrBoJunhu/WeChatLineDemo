@@ -234,11 +234,11 @@ static CGFloat wordTopSpace = 2;
     CGContextAddLines(ctx, XPoints, 2);
     
     //Y轴
-    CGPoint YPoints[2];
-    YPoints[0] = origin_Point;
-    YPoints[1] = left_Top_Point;
-    CGContextAddLines(ctx, YPoints, 2);
-    CGContextDrawPath(ctx, kCGPathStroke);
+//    CGPoint YPoints[2];
+//    YPoints[0] = origin_Point;
+//    YPoints[1] = left_Top_Point;
+//    CGContextAddLines(ctx, YPoints, 2);
+//    CGContextDrawPath(ctx, kCGPathStroke);
     
     
     
@@ -340,7 +340,7 @@ static CGFloat wordTopSpace = 2;
         
         }
     
-
+    [self strokeFunction];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -448,6 +448,26 @@ static CGFloat wordTopSpace = 2;
     }
     
 }
+
+
+- (void)strokeFunction {
+
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    
+    animation.duration = 1.0;
+    
+    animation.fromValue = @0;
+    
+    animation.toValue = @1.0;
+    
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    animation.removedOnCompletion = YES;
+    
+    [self.layer addAnimation:animation forKey:@"circleAnimation"];
+    
+}
+
 
 
 @end
