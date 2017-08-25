@@ -22,7 +22,7 @@ static CGFloat pointRaidus = 1;
 
 static CGFloat fontSize = 8;
 
-static CGFloat showLBFontSize = 12;
+static CGFloat showLBFontSize = 15;
 
 static CGFloat titleFontSize = 18;
 
@@ -409,7 +409,6 @@ static CGFloat wordTopSpace = 2;
             
             self.showClickLB.textAlignment = NSTextAlignmentCenter;
             
-            self.showClickLB.font = [UIFont systemFontOfSize:fontSize];
             
             [self addSubview:self.showClickLB];
             
@@ -427,20 +426,30 @@ static CGFloat wordTopSpace = 2;
         
         self.showClickLB.alpha = 0;
         
+        self.showClickLB.font = [UIFont systemFontOfSize:fontSize];
+      
         self.showClickLB.text = numString;
         
         self.showClickLB.center = showPoint;
         
+        
         [UIView animateWithDuration:0.5 animations:^{
-          
+         
             self.showClickLB.center = CGPointMake(showPoint.x, 50);
             
             self.showClickLB.alpha = 1.0;
+           
             
-            self.showClickLB.font = [UIFont systemFontOfSize:showLBFontSize];
-        
+        } completion:^(BOOL finished) {
+           
+            if (finished) {
+              
+                self.showClickLB.font = [UIFont systemFontOfSize:showLBFontSize];
+                
+            }
+            
         }];
-
+        
         
     }else{
         
