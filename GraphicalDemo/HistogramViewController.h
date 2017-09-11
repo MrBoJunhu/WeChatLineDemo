@@ -12,7 +12,9 @@ typedef NS_ENUM(NSUInteger, Type) {
     
     Histogram_Type = 0 ,//柱状图
     
-    BrokenLine_Type = 1, //折线图
+    BrokenLine_Type , //折线图
+    
+    RadarGraph_Type ,  //雷达图
     
 };
 

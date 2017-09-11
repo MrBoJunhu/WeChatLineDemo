@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A506E4611F6283070007F320 /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A506E4601F6283070007F320 /* RadarView.m */; };
+		A506E4641F628A480007F320 /* UIBezierPath+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A506E4631F628A480007F320 /* UIBezierPath+Category.m */; };
 		A50CE40D1F457E19001DFAD0 /* BrokenBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = A50CE40C1F457E19001DFAD0 /* BrokenBasicView.m */; };
 		A5A448DD1F45256F00234FB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A448DC1F45256F00234FB7 /* main.m */; };
 		A5A448E01F45256F00234FB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A448DF1F45256F00234FB7 /* AppDelegate.m */; };
@@ -40,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A506E45F1F6283070007F320 /* RadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarView.h; sourceTree = "<group>"; };
+		A506E4601F6283070007F320 /* RadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarView.m; sourceTree = "<group>"; };
+		A506E4621F628A480007F320 /* UIBezierPath+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Category.h"; sourceTree = "<group>"; };
+		A506E4631F628A480007F320 /* UIBezierPath+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Category.m"; sourceTree = "<group>"; };
 		A50CE40B1F457E19001DFAD0 /* BrokenBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrokenBasicView.h; sourceTree = "<group>"; };
 		A50CE40C1F457E19001DFAD0 /* BrokenBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrokenBasicView.m; sourceTree = "<group>"; };
 		A5A448D81F45256F00234FB7 /* GraphicalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphicalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +176,10 @@
 				A5A449191F45395600234FB7 /* BrokenLineView.m */,
 				A5A4491B1F45407A00234FB7 /* NSString+Category.h */,
 				A5A4491C1F45407A00234FB7 /* NSString+Category.m */,
+				A506E45F1F6283070007F320 /* RadarView.h */,
+				A506E4601F6283070007F320 /* RadarView.m */,
+				A506E4621F628A480007F320 /* UIBezierPath+Category.h */,
+				A506E4631F628A480007F320 /* UIBezierPath+Category.m */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -310,8 +320,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A506E4611F6283070007F320 /* RadarView.m in Sources */,
 				A5A4491D1F45407A00234FB7 /* NSString+Category.m in Sources */,
 				A5A449141F4525E600234FB7 /* HomeTableViewController.m in Sources */,
+				A506E4641F628A480007F320 /* UIBezierPath+Category.m in Sources */,
 				A50CE40D1F457E19001DFAD0 /* BrokenBasicView.m in Sources */,
 				A5A4491A1F45395600234FB7 /* BrokenLineView.m in Sources */,
 				A5A448E01F45256F00234FB7 /* AppDelegate.m in Sources */,

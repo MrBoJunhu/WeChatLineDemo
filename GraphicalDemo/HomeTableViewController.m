@@ -27,7 +27,7 @@
   
     self.title = @"图形绘制";
     
-    self.typesArray = @[@"柱状图", @"折线图",@"bezierPathWithRoundedRect"];
+    self.typesArray = @[@"柱状图", @"折线图",@"雷达图"];
 
 }
 

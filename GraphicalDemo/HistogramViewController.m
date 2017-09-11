@@ -10,7 +10,9 @@
 
 #import "HistogramView.h"
 
-#include "BrokenBasicView.h"
+#import "BrokenBasicView.h"
+
+#import "RadarView.h"
 
 @interface HistogramViewController ()
 
@@ -23,6 +25,12 @@
  折线图
  */
 @property (nonatomic, strong) BrokenBasicView * brokenLineV;
+
+/**
+ 雷达图
+ */
+@property (nonatomic, strong) RadarView * radarV;
+
 
 /**
  当前类型
@@ -59,6 +67,12 @@
             break;
         case BrokenLine_Type:{
             [self brokenLineTest];
+        }
+            break;
+            
+        case RadarGraph_Type:
+        {
+            [self radarViewTest];
         }
             break;
         default:
@@ -107,6 +121,21 @@
     [self.brokenLineV setNeedsDisplay];
     
 }
+
+#pragma mark - 雷达图
+
+- (void)radarViewTest {
+    
+    self.radarV = [[RadarView alloc] initWithFrame:CGRectMake(0, 90, self.view.frame.size.width, self.view.frame.size.width)];
+    
+    self.radarV.backgroundColor = [UIColor whiteColor];
+    
+    [self.view addSubview:self.radarV];
+    
+    [self.radarV setNeedsDisplay];
+    
+}
+
 
 
 
